@@ -21,5 +21,6 @@ help:
 	cp ../timings.ipynb source/timings.ipynb
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	cp build/html/* ../docs/ -R
+	touch ../docs/.nojekyll
 
 
