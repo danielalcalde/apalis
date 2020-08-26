@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Functions &mdash; apalis 0.1 documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/css/spc-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="_static/css/spc-extend.css">
+    <link rel="stylesheet" href="_static/scipy.css" type="text/css" >
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" >
+    <link rel="stylesheet" href="_static/graphviz.css" type="text/css" >
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="_static/js/copybutton.js"></script>
+    <link rel="index" title="Index" href="genindex.html" >
+    <link rel="search" title="Search" href="search.html" >
+    <link rel="top" title="apalis 0.1 documentation" href="index.html" >
+    <link rel="next" title="Classes" href="classes.html" >
+    <link rel="prev" title="Timings" href="timings.html" >
+<style>
+  .main {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  div.top-scipy-org-logo-header {
+    background-color: white;
+    border-bottom: 2px solid#333333; /* Warm Black */
+    margin-top: 0;
+    box-shadow: none;
+  }
+  div.top-scipy-org-logo-header img {
+    height: 85px;
+    padding-left: 42px;
+  }
+  div.spc-navbar .nav-pills > li > a {
+    background-color: #0066ff; /* Complementary to #ff6600 */
+  }
+</style>
+ 
+
+  </head>
+  <body>
+<div class="container">
+  <div class="top-scipy-org-logo-header">
+    <a href="index.html">
+      <img border=0 alt="Apalis" heigth=1 src="_static/apalislogo.svg">
+    </a>
+  </div>
+</div>
+
+
+    <div class="container">
+      <div class="main">
+        
+	<div class="row-fluid">
+	  <div class="span12">
+	    <div class="spc-navbar">
+              
+    <ul class="nav nav-pills pull-left">
+	
+        <li class="active"><a href="index.html">apalis 0.1 documentation</a></li>
+	 
+    </ul>
+              
+              
+    <ul class="nav nav-pills pull-right">
+      <li class="active">
+        <a href="genindex.html" title="General Index"
+           accesskey="I">index</a>
+      </li>
+      <li class="active">
+        <a href="classes.html" title="Classes"
+           accesskey="N">next</a>
+      </li>
+      <li class="active">
+        <a href="timings.html" title="Timings"
+           accesskey="P">previous</a>
+      </li>
+    </ul>
+              
+	    </div>
+	  </div>
+	</div>
+        
+
+	<div class="row-fluid">
+      <div class="spc-rightsidebar span3">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="timings.html"
+                        title="previous chapter">Timings</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="classes.html"
+                        title="next chapter">Classes</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h4>Quick search</h4>
+    <div>
+    <form class="search" action="search.html" method="get">
+      <input type="text" style="width: inherit;" name="q" />
+      <input type="submit" value="search" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+          <div class="span9">
+            
+        <div class="bodywrapper">
+          <div class="body" id="spc-section-body">
+            
+  <div class="section" id="functions">
+<h1>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="apalis.get">
+<code class="sig-prename descclassname">apalis.</code><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tokens</span></em><span class="sig-paren">)</span><a class="headerlink" href="#apalis.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the result of tasks executed in parallel by apalis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>tokens</strong><span class="classifier">list</span></dt><dd><p>List of objects of the type Token.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>list</dt><dd><p>List of results</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">handler_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">Handler</span><span class="p">(</span><span class="n">ClassName</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">apalis</span><span class="o">.</span><span class="n">get</span><span class="p">([</span><span class="n">g</span><span class="o">.</span><span class="n">f</span><span class="p">()</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">handler_list</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="apalis.put">
+<code class="sig-prename descclassname">apalis.</code><code class="sig-name descname">put</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obj</span></em><span class="sig-paren">)</span><a class="headerlink" href="#apalis.put" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads object into Plasma. Will only work if plasma has been initialized with init_plasma()</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>obj :</strong></dt><dd><p>Object that will be shared through Plasma.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>ObjectId</dt><dd><p>A ObjectId generated by Plasma that can be be passed to functions that are executed in a child process by apalis.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">apalis</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">ObjectID(bad02ba2c0f59e5f55033298520668cbf0ad1102)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="apalis.init_plasma">
+<code class="sig-prename descclassname">apalis.</code><code class="sig-name descname">init_plasma</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mem</span><span class="o">=</span><span class="default_value">1000</span></em><span class="sig-paren">)</span><a class="headerlink" href="#apalis.init_plasma" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes a Plasma object store.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>mem (int, optional): The argument specifies the size of the store in megabytes. Defaults to 1000.</p>
+</dd>
+<dt>Returns:</dt><dd><p>(PlasmaClient): Plasma client object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="apalis.patch_pickeling">
+<code class="sig-prename descclassname">apalis.</code><code class="sig-name descname">patch_pickeling</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#apalis.patch_pickeling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exchanges the pickle protocol from multiprocessing to the one used by cloudpickle.</p>
+<p>From the cloudpickle README:  
+cloudpickle is especially useful for cluster computing where Python code is shipped over the network to execute on remote hosts, possibly close to the data.
+Among other things, cloudpickle supports pickling for lambda functions along with functions and classes defined interactively in the __main__ module (for instance in a script, a shell or a Jupyter notebook).</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container container-navbar-bottom">
+      <div class="spc-navbar">
+        
+      </div>
+    </div>
+    <div class="container">
+    <div class="footer">
+    <div class="row-fluid">
+    <ul class="inline pull-left">
+      <li>
+        &copy; Copyright 2020, Daniel Alcalde Puente.
+      </li>
+      <li>
+      Created using <a href="https://www.sphinx-doc.org">Sphinx</a> 3.1.2.
+      </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <title>apalis.Handler &mdash; apalis 0.1 documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/css/spc-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="_static/css/spc-extend.css">
+    <link rel="stylesheet" href="_static/scipy.css" type="text/css" >
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" >
+    <link rel="stylesheet" href="_static/graphviz.css" type="text/css" >
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="_static/js/copybutton.js"></script>
+    <link rel="index" title="Index" href="genindex.html" >
+    <link rel="search" title="Search" href="search.html" >
+    <link rel="top" title="apalis 0.1 documentation" href="index.html" >
+    <link rel="up" title="Classes" href="classes.html" >
+    <link rel="next" title="apalis.GroupHandler" href="apalis.GroupHandler.html" >
+    <link rel="prev" title="Classes" href="classes.html" >
+<style>
+  .main {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  div.top-scipy-org-logo-header {
+    background-color: white;
+    border-bottom: 2px solid#333333; /* Warm Black */
+    margin-top: 0;
+    box-shadow: none;
+  }
+  div.top-scipy-org-logo-header img {
+    height: 85px;
+    padding-left: 42px;
+  }
+  div.spc-navbar .nav-pills > li > a {
+    background-color: #0066ff; /* Complementary to #ff6600 */
+  }
+</style>
+ 
+
+  </head>
+  <body>
+<div class="container">
+  <div class="top-scipy-org-logo-header">
+    <a href="index.html">
+      <img border=0 alt="Apalis" heigth=1 src="_static/apalislogo.svg">
+    </a>
+  </div>
+</div>
+
+
+    <div class="container">
+      <div class="main">
+        
+	<div class="row-fluid">
+	  <div class="span12">
+	    <div class="spc-navbar">
+              
+    <ul class="nav nav-pills pull-left">
+	
+        <li class="active"><a href="index.html">apalis 0.1 documentation</a></li>
+	
+          <li class="active"><a href="classes.html" accesskey="U">Classes</a></li> 
+    </ul>
+              
+              
+    <ul class="nav nav-pills pull-right">
+      <li class="active">
+        <a href="genindex.html" title="General Index"
+           accesskey="I">index</a>
+      </li>
+      <li class="active">
+        <a href="apalis.GroupHandler.html" title="apalis.GroupHandler"
+           accesskey="N">next</a>
+      </li>
+      <li class="active">
+        <a href="classes.html" title="Classes"
+           accesskey="P">previous</a>
+      </li>
+    </ul>
+              
+	    </div>
+	  </div>
+	</div>
+        
+
+	<div class="row-fluid">
+      <div class="spc-rightsidebar span3">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="classes.html"
+                        title="previous chapter">Classes</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="apalis.GroupHandler.html"
+                        title="next chapter">apalis.GroupHandler</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h4>Quick search</h4>
+    <div>
+    <form class="search" action="search.html" method="get">
+      <input type="text" style="width: inherit;" name="q" />
+      <input type="submit" value="search" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+          <div class="span9">
+            
+        <div class="bodywrapper">
+          <div class="body" id="spc-section-body">
+            
+  <div class="section" id="apalis-handler">
+<h1>apalis.Handler<a class="headerlink" href="#apalis-handler" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="apalis.Handler">
+<em class="property">class </em><code class="sig-prename descclassname">apalis.</code><code class="sig-name descname">Handler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obj</span></em>, <em class="sig-param"><span class="n">affinity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">param</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#apalis.Handler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the object into a forked process and provides an interface to interact with it.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>obj :</strong></dt><dd><blockquote>
+<div><p>Object to be saved in a forked process.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>affinity<span class="classifier">int, optional</span></dt><dd><p>cpu affinity of the process. This is usefull when the processed functions take between 1ms and 10ms to complete, by default None</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="k">return</span> <span class="n">x</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">h</span> <span class="o">=</span> <span class="n">apalis</span><span class="o">.</span><span class="n">Handler</span><span class="p">(</span><span class="n">A</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">token</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">token</span><span class="p">()</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="classes.html#apalis.Handler.multiple_run" title="apalis.Handler.multiple_run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">multiple_run</span></code></a>(tasks)</p></td>
+<td><p>Executes several tasks.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="classes.html#apalis.Handler.run" title="apalis.Handler.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(tasks)</p></td>
+<td><p>Runs the tasks and directly returns the ouputs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="classes.html#apalis.Handler.single_run" title="apalis.Handler.single_run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">single_run</span></code></a>(task)</p></td>
+<td><p>Executes a single task.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="apalis.Handler.single_run">
+<code class="sig-name descname">single_run</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">task</span></em><span class="sig-paren">)</span><a class="headerlink" href="#apalis.Handler.single_run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executes a single task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>task</strong><span class="classifier">dict</span></dt><dd><p>Dictionary contatining the required fields to execute a function, get an attribute, etc.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>Token</dt><dd><p>A token is returned. If it is called the main process will wait until the child process has returned the outputs of the function.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">h</span><span class="o">.</span><span class="n">single_run</span><span class="p">([{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;function_name&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;args&#39;</span><span class="p">:</span> <span class="n">args</span><span class="p">,</span> <span class="s1">&#39;kwargs&#39;</span><span class="p">:</span> <span class="n">kwargs</span><span class="p">,</span> <span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;run&#39;</span><span class="p">}])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="apalis.Handler.multiple_run">
+<code class="sig-name descname">multiple_run</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tasks</span></em><span class="sig-paren">)</span><a class="headerlink" href="#apalis.Handler.multiple_run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executes several tasks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>task</strong><span class="classifier">dict</span></dt><dd><p>Dictionary contatining the required fields to execute a function, get an attribute, etc.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>Token</dt><dd><p>A token is returned. If it is called the main process will wait until the child process has returned the outputs of the function.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tasks</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tasks</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;function_name&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;args&#39;</span><span class="p">:</span> <span class="n">args</span><span class="p">,</span> <span class="s1">&#39;kwargs&#39;</span><span class="p">:</span> <span class="n">kwargs</span><span class="p">,</span> <span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;run&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tasks</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;attribute_name&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;get_attr&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">h</span><span class="o">.</span><span class="n">multiple_run</span><span class="p">(</span><span class="n">tasks</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="apalis.Handler.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tasks</span></em><span class="sig-paren">)</span><a class="headerlink" href="#apalis.Handler.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the tasks and directly returns the ouputs.
+It is faster than multiple_run since it does not need to deal with Tokens.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>tasks</strong><span class="classifier">list(dict)</span></dt><dd><p>List of tasks.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>list</dt><dd><p>List with the output of the tasks.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tasks</span> <span class="o">=</span> <span class="p">[{</span><span class="n">name</span><span class="s1">&#39;: &#39;</span><span class="o">&lt;</span><span class="n">function_name</span><span class="o">&gt;</span><span class="s1">&#39;, &#39;</span><span class="n">args</span><span class="s1">&#39;: args, &#39;</span><span class="n">kwargs</span><span class="s1">&#39;: kwargs, &#39;</span><span class="n">mode</span><span class="s1">&#39;: &#39;</span><span class="n">run</span><span class="s1">&#39;}, </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">taks</span> <span class="o">+=</span> <span class="p">{</span><span class="n">name</span><span class="s1">&#39;: &#39;</span><span class="o">&lt;</span><span class="n">attr_name</span><span class="o">&gt;</span><span class="s1">&#39;, &#39;</span><span class="n">value</span><span class="s1">&#39;: 5, &#39;</span><span class="n">mode</span><span class="s1">&#39;: &#39;</span><span class="nb">setattr</span><span class="s1">&#39;}]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">h</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tasks</span><span class="p">)</span>
+<span class="go">[result, attr]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container container-navbar-bottom">
+      <div class="spc-navbar">
+        
+      </div>
+    </div>
+    <div class="container">
+    <div class="footer">
+    <div class="row-fluid">
+    <ul class="inline pull-left">
+      <li>
+        &copy; Copyright 2020, Daniel Alcalde Puente.
+      </li>
+      <li>
+      Created using <a href="https://www.sphinx-doc.org">Sphinx</a> 3.1.2.
+      </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+  </body>
+</html>

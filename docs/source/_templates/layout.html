@@ -1,0 +1,36 @@
+{% extends "!layout.html" %}
+
+{%- block extrahead %}
+<style>
+  .main {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  div.top-scipy-org-logo-header {
+    background-color: white;
+    border-bottom: 2px solid#333333; /* Warm Black */
+    margin-top: 0;
+    box-shadow: none;
+  }
+  div.top-scipy-org-logo-header img {
+    height: 85px;
+    padding-left: 42px;
+  }
+  div.spc-navbar .nav-pills > li > a {
+    background-color: #0066ff; /* Complementary to #ff6600 */
+  }
+</style>
+{{ super() }}
+{% endblock %}
+
+{%- block header %}
+<div class="container">
+  <div class="top-scipy-org-logo-header">
+    <a href="{{ pathto('index') }}">
+      <img border=0 alt="Apalis" heigth=1 src="{{ pathto('_static/apalislogo.svg', 1) }}">
+    </a>
+  </div>
+</div>
+
+{% endblock %}
