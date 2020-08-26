@@ -36,8 +36,7 @@ To send an object into a parallel process just:
 The same can be done with multiple Handlers at once.
 
 ```python
-    
-   es = [apalis.Handler(A()) for _ in range(16)]
+   objs = [apalis.Handler(A()) for _ in range(16)]
    tokens = [obj.expensive(5) for obj in objs]
    aplais.get(tokens) # Gets the results of the operations.
 
