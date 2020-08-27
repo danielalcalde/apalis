@@ -4,7 +4,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    " <font size=\"6\"> <center> **[Open in Github](https://github.com/danielalcalde)**</center></font> "
+    " <font size=\"6\"> <center> **[Open in Github](https://github.com/danielalcalde/apalis/blob/master/timings.ipynb)**</center></font> "
    ]
   },
   {
@@ -613,7 +613,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.7.1"
+   "version": "3.6.10"
   },
   "toc": {
    "base_numbering": 1,
