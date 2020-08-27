@@ -39,4 +39,4 @@ The same can be done with multiple Handlers at once.
 
 ```
 
-More examples can be found in this (Jupyter Notebook)[https://danielalcalde.github.io/apalis/examples.html].
+More examples can be found in this [Jupyter Notebook](https://danielalcalde.github.io/apalis/examples.html).
