@@ -1,6 +1,7 @@
 <p align="center">
   <img src="https://danielalcalde.github.io/apalis/_static/apalislogo.svg" />
 </p>
+
 # What is Apalis?
 
 Apalis is a python library for parallel computing. It focuses on enabling parallel computing with little overhead. To explore the apalis functionality see the [Documentation](https://danielalcalde.github.io/apalis).
