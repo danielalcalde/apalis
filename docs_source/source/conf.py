@@ -90,7 +90,7 @@ html_theme_options = {
     "edit_link": "false",
     "sidebar": "left",
     "scipy_org_logo": "false",
-    "rootlinks": []
+    "rootlinks": [("https://github.com/danielalcalde/apalis", "github")]
 }
 html_show_sourcelink = False
 #html_title = 'apalis documentation'

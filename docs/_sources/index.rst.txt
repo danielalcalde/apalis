@@ -26,7 +26,7 @@ To send an object into a parallel process just:
       return x
       
    a = A()
-   obj = apalis.Handler(a) # Send object
+   obj = apalis.Handler(a) # Sends the object to a child process.
    token = obj.expensive(5) # Sends the task to the object in the child process.
    token() # Calling the token yields the result of the operation.
 

@@ -11,14 +11,14 @@ PyDoc_STRVAR(_posixshmem_shm_open__doc__,
 "Open a shared memory object.  Returns a file descriptor (integer).");
 
 #define _POSIXSHMEM_SHM_OPEN_METHODDEF    \
-    {"shm_open", (PyCFunction)_posixshmem_shm_open, METH_FASTCALL|METH_KEYWORDS, _posixshmem_shm_open__doc__},
+    {"shm_open", (PyCFunction)_posixshmem_shm_open, METH_FASTCALL, _posixshmem_shm_open__doc__},
 
 static int
 _posixshmem_shm_open_impl(PyObject *module, PyObject *path, int flags,
                           int mode);
 
 static PyObject *
-_posixshmem_shm_open(PyObject *module, PyObject *const *args, Py_ssize_t nargs, PyObject *kwnames)
+_posixshmem_shm_open(PyObject *module, PyObject **args, Py_ssize_t nargs, PyObject *kwnames)
 {
     PyObject *return_value = NULL;
     static const char * const _keywords[] = {"path", "flags", "mode", NULL};
@@ -28,7 +28,7 @@ _posixshmem_shm_open(PyObject *module, PyObject *const *args, Py_ssize_t nargs, 
     int mode = 511;
     int _return_value;
 
-    if (!_PyArg_ParseStackAndKeywords(args, nargs, kwnames, &_parser,
+    if (!_PyArg_ParseStack(args, nargs, kwnames, &_parser,
         &path, &flags, &mode)) {
         goto exit;
     }
@@ -57,20 +57,20 @@ PyDoc_STRVAR(_posixshmem_shm_unlink__doc__,
 "region.");
 
 #define _POSIXSHMEM_SHM_UNLINK_METHODDEF    \
-    {"shm_unlink", (PyCFunction)_posixshmem_shm_unlink, METH_FASTCALL|METH_KEYWORDS, _posixshmem_shm_unlink__doc__},
+    {"shm_unlink", (PyCFunction)_posixshmem_shm_unlink, METH_FASTCALL, _posixshmem_shm_unlink__doc__},
 
 static PyObject *
 _posixshmem_shm_unlink_impl(PyObject *module, PyObject *path);
 
 static PyObject *
-_posixshmem_shm_unlink(PyObject *module, PyObject *const *args, Py_ssize_t nargs, PyObject *kwnames)
+_posixshmem_shm_unlink(PyObject *module, PyObject **args, Py_ssize_t nargs, PyObject *kwnames)
 {
     PyObject *return_value = NULL;
     static const char * const _keywords[] = {"path", NULL};
     static _PyArg_Parser _parser = {"U:shm_unlink", _keywords, 0};
     PyObject *path;
 
-    if (!_PyArg_ParseStackAndKeywords(args, nargs, kwnames, &_parser,
+    if (!_PyArg_ParseStack(args, nargs, kwnames, &_parser,
         &path)) {
         goto exit;
     }
@@ -89,4 +89,4 @@ exit:
 #ifndef _POSIXSHMEM_SHM_UNLINK_METHODDEF
     #define _POSIXSHMEM_SHM_UNLINK_METHODDEF
 #endif /* !defined(_POSIXSHMEM_SHM_UNLINK_METHODDEF) */
-/*[clinic end generated code: output=0aa58e1420d090dc input=a9049054013a1b77]*/
+/*[clinic end generated code: output=e7c36ad78e453b25 input=a9049054013a1b77]*/

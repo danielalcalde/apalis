@@ -64,6 +64,7 @@
 	    <div class="spc-navbar">
               
     <ul class="nav nav-pills pull-left">
+        <li class="active"><a href="https://github.com/danielalcalde/apalis">github</a></li>
 	 
     </ul>
               
@@ -139,7 +140,7 @@ To send an object into a parallel process just:</p>
    <span class="k">return</span> <span class="n">x</span>
 
 <span class="n">a</span> <span class="o">=</span> <span class="n">A</span><span class="p">()</span>
-<span class="n">obj</span> <span class="o">=</span> <span class="n">apalis</span><span class="o">.</span><span class="n">Handler</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># Send object</span>
+<span class="n">obj</span> <span class="o">=</span> <span class="n">apalis</span><span class="o">.</span><span class="n">Handler</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># Sends the object to a child process.</span>
 <span class="n">token</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">expensive</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># Sends the task to the object in the child process.</span>
 <span class="n">token</span><span class="p">()</span> <span class="c1"># Calling the token yields the result of the operation.</span>
 </pre></div>
